@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.ControllerLogin;
 import javax.swing.JTextField;
 
 /**
@@ -13,11 +14,13 @@ import javax.swing.JTextField;
  */
 public class ViewLogin extends javax.swing.JFrame {
 
+    ControllerLogin cl;
     /**
      * Creates new form ViewLogin
      */
     public ViewLogin() {
         initComponents();
+        cl = new ControllerLogin(this);
     }
 
     /**
@@ -89,6 +92,7 @@ public class ViewLogin extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
+        cl.UserLogin();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**

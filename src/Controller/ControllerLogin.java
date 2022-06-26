@@ -25,12 +25,13 @@ public class ControllerLogin {
     public void UserLogin() {
         String username = frame.getInputUsername();
         String password = frame.getInputPassword();
+        
         int uindex = ld.usernames.indexOf(username);
         int role = ld.login(username, password);
         int id_user = ld.id_users.get(uindex);
         
-        if(role == 1) {
-            new ViewDashboard().setVisible(true);
+        if(role == 2) {
+            new ViewDashboard(id_user).setVisible(true);
         }
     }
 }

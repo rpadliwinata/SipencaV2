@@ -27,6 +27,7 @@ public class LoginDAO {
     
     public LoginDAO() {
         conn = koneksiDatabase.connect();
+        getAll();
     }
     
     public void getAll() {
